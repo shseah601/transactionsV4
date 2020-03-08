@@ -28,7 +28,7 @@ fs.readFile(__dirname + '/../build/contracts/Transaction.json', function(error, 
             logger.info("Name: " + data.firstName + " | Dollar: " + (parseFloat(data.value) / 100).toFixed(2) + " | Event: New Account")
             break;
           case "AddValue":
-            logger.info("Name: " + data.firstName + " | Dollar: " + (parseFloat(data.value) / 100).toFixed(2) + " | Event: Change Value")
+            logger.info("Name: " + data.firstName + " | Dollar: " + (parseFloat(data.value) / 100).toFixed(2) + " | Dollar Changed: " + (parseFloat(data.valueAdded) / 100).toFixed(2) + " | Event: Change Value")
             break;
           case "EditInfo":
             logger.info("Name: " + data.firstName + " | Dollar: " + (parseFloat(data.value) / 100).toFixed(2) + " | Event: Edit Info")
