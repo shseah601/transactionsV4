@@ -1,0 +1,4 @@
+Sun, 08 Mar 2020 15:53:52 GMT | INFO | app.log | Name: Shelly | Dollar: 0.00 | Event: New Account | 
+Sun, 08 Mar 2020 15:54:04 GMT | INFO | app.log | Name: Shelly | Dollar: 10.24 | Dollar Changed: 10.24 | Event: Change Value | 
+Sun, 08 Mar 2020 15:54:36 GMT | INFO | app.log | Name: Izabella | Dollar: 10.24 | Event: Edit Info | 
+Sun, 08 Mar 2020 15:55:13 GMT | INFO | app.log | Name: Izabella | Dollar: 11.31 | Dollar Changed: 1.07 | Event: Change Value | 

@@ -17,7 +17,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
-            <li class="active isAdded"><a href="addValue.html">Add Value</a></li>
+            <li class="active isAdded"><a href="addValue.html">Add Dollar</a></li>
             <li class='isAdded'><a href="userInfo.html">User Info</a></li>
           </ul>
       </div>
@@ -25,7 +25,7 @@
     <div class="container" style="width: 650px;">
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="text-center">Add Value</h1>
+          <h1 class="text-center">Add Dollar</h1>
           <hr/>
           <br/>
           <div id="loader">
@@ -41,7 +41,7 @@
             <hr/>
             <form id='addValueForm' onSubmit="App.addValue(); return false;">
                 <div class="form-group">
-                    <label for="valueAdd">Value to add ($)</label>
+                    <label for="valueAdd">Dollar to add ($)</label>
                     <input type='number' min="0" step='0.01' value ='0.00' class="form-control" id="valueAdd"></input>
                 </div>
                 <div class="form-group" align='right'>

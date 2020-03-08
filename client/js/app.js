@@ -92,6 +92,7 @@ App = {
   },
 
   render: function() {
+    console.log('render main')
     var txInstance;
     var loader = $("#loader");
     var content = $("#content");
@@ -140,6 +141,7 @@ App = {
   },
 
   renderAddValue: function() {
+    console.log('render addValue')
     var txInstance;
     var loader = $("#loader");
     var content = $("#content");
@@ -163,7 +165,7 @@ App = {
       }
       return txInstance.getUser(App.account);
     }).then(function(user) {
-      $("#userValue").html("Your Value: $ " + (parseFloat(user[3]) / 100).toFixed(2));
+      $("#userValue").html("Current Dollar: $ " + (parseFloat(user[3]) / 100).toFixed(2));
       $('#valueAdd').change(function () {
         $(this).val(parseFloat($(this).val()).toFixed(2));
       });
@@ -175,6 +177,7 @@ App = {
   },
 
   renderEditInfo: function() {
+    console.log('render editInfo')
     var txInstance;
     var loader = $("#loader");
     var content = $("#content");
@@ -209,6 +212,7 @@ App = {
   },
 
   renderUserInfo: function() {
+    console.log('render userInfo')
     var txInstance;
     var loader = $("#loader");
     var content = $("#content");
@@ -247,6 +251,7 @@ App = {
   },
 
   renderAddUser: function() {
+    console.log('render addUser')
     var txInstance;
     var loader = $("#loader");
     var content = $("#content");
@@ -333,7 +338,7 @@ App = {
       valueAddBtn.attr("disabled", true);
       return txInstance.addValue.sendTransaction(valueForContract, {from: App.account})
     }).then(function() {
-      $('#message').html('Your value ' + value + ' is added');
+      $('#message').html(value + ' dollar is added');
       valueAddBtn.attr("disabled", false);
       $('#addValueForm')[0].reset();
       messageDisplay.show();
@@ -342,10 +347,10 @@ App = {
       }, 5000)
       return txInstance.getUser(App.account);
     }).then(function(user) {
-      $("#userValue").html("Your Value: $ " + (parseFloat(user[3]) / 100).toFixed(2));
+      $("#userValue").html("Current Dollar: $ " + (parseFloat(user[3]) / 100).toFixed(2));
     }).catch(function(err) {
       if (err.code == 4001) {
-        $('#message').html('User creation failed due to transaction rejetion.');
+        $('#message').html('Value added failed due to transaction rejetion.');
         valueAddBtn.attr("disabled", false);
         messageDisplay.show();
         setTimeout(function() {
@@ -386,7 +391,7 @@ App = {
       }, 2000)
     }).catch(function(err) {
       if (err.code == 4001) {
-        $('#message').html('User creation failed due to transaction rejetion.');
+        $('#message').html('User info edit failed due to transaction rejetion.');
         userEditBtn.attr("disabled", false);
         messageDisplay.show();
         setTimeout(function() {

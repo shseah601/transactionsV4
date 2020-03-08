@@ -19,7 +19,7 @@ contract Transaction {
 
     event AddValue(address from, string firstName, string lastName, uint256 value, uint valueAdded);
 
-    event EditInfo(address from, string firstName, string lastName, string userAddress);
+    event EditInfo(address from, string firstName, string lastName, string userAddress, uint256 value);
 
     // add user to contract
     function addUser(string memory firstName, string memory lastName, string memory userAddress) public {
@@ -58,7 +58,7 @@ contract Transaction {
         userList[msg.sender].firstName = firstName;
         userList[msg.sender].lastName = lastName;
         userList[msg.sender].userAddress = userAddress;
-        emit EditInfo(msg.sender, firstName, lastName, userAddress);
+        emit EditInfo(msg.sender, firstName, lastName, userAddress, userList[msg.sender].value);
     }
 
     // add value to the added user
